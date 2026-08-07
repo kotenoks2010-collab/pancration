@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Федерация Панкратиона — Официальный сайт</title>
+    <style>
+        :root {
+            --primary-color: #d32f2f; /* Красный акцент */
+            --dark-color: #1a1a1a;    /* Темный фон */
+            --light-color: #f4f4f4;   /* Светлый фон */
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Шапка сайта */
+        header {
+            background-color: var(--dark-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header .logo span {
+            color: var(--primary-color);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Главный баннер */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://placeholder.com') no-repeat center center/cover;
+            height: 60vh;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #b71c1c;
+        }
+
+        /* Секции */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+
+        /* Календарь соревнований */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .event-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-top: 4px solid var(--primary-color);
+            padding: 1.5rem;
+        }
+
+        .event-date {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Форма записи */
+        .registration {
+            background-color: var(--light-color);
+            max-width: 100%;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header>
+        <div class="logo">Федерация <span>Панкратиона</span></div>
+        <nav>
+            <a href="#about">О нас</a>
+            <a href="#events">Календарь</a>
+            <a href="#join">Запись в группы</a>
+        </nav>
+    </header>
+
+    <!-- Главный баннер -->
+    <div class="hero">
+        <h1>Развитие единоборств с 1995 года</h1>
+        <p>Подготовка спортсменов любого уровня — от новичков до профессионалов</p>
+        <a href="#join" class="btn">Записаться на тренировку</a>
+    </div>
+
+    <!-- Раздел о панкратионе -->
+    <section id="about">
+        <h2 class="section-title">О Панкратионе</h2>
+        <p>Панкратион — древнейшее олимпийское единоборство, сочетающее в себе удары руками и ногами, борцовскую технику, болевые и удушающие приемы. Наша цель — воспитание универсального бойца, сильного духом и телом.</p>
+    </section>
+
+    <!-- Календарь соревнований -->
+    <section id="events">
+        <h2 class="section-title">Календарь соревнований 2026</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-date">15–18 Мая 2026</div>
+                <h3>Турнир «Moscow Open»</h3>
+                <p>Международные соревнования памяти А. Нурмагомедова.</p>
+            </div>
+            <div class="event-card">
+                <div class="event-date">05–08 Октября 2026</div>
+                <h3>«Огненные врата»</h3>
+                <p>Всероссийский турнир по панкратиону для возрастных групп 8-18+ лет.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма записи -->
+    <section id="join" class="registration">
+        <h2 class="section-title">Запись в спортивные секции</h2>
+        <div class="form-container">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">ФИО спортсмена</label>
+                    <input type="text" id="name" name="name" required placeholder="Иванов Иван Иванович">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Номер телефона</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 000-00-00">
+                </div>
+                <div class="form-group">
+                    <label for="discipline">Направление подготовки</label>
+                    <select id="discipline" name="discipline">
+                        <option value="pankration">Панкратион / ММА</option>
+                        <option value="boxing">Бокс / Кикбоксинг</option>
+                        <option value="grappling">Грэпплинг / Самбо</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <p>&copy; 2026 Официальный сайт Федерации панкратиона. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
