@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Российская Федерация Боевых Искусств(РФБИ) — Официальный сайт</title>
     <style>
-        :root {
+            :root {
             --primary-color: #d32f2f; /* Красный акцент */
             --dark-color: #1a1a1a;    /* Темный фон */
             --light-color: #f4f4f4;   /* Светлый фон */
@@ -19,34 +19,34 @@
             color: #333;
         }
 
-        /* Шапка сайта */
+        /* --- ШАПКА САЙТА ДЛЯ КОМПЬЮТЕРОВ (ПК) --- */
         header {
-            background-color: var(--dark-color);
-            color: #fff;
-            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            padding: 15px 30px;
+            background-color: var(--dark-color); /* Сделали базовый фон темным */
+            color: #fff;
         }
 
-        header .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
         }
 
-        header .logo span {
+        .logo span {
             color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
         }
 
         nav a {
-            color: #fff;
             text-decoration: none;
-            margin-left: 1.5rem;
+            color: #fff;
             transition: color 0.3s;
         }
 
@@ -54,9 +54,10 @@
             color: var(--primary-color);
         }
 
-        /* Главный баннер */
+        /* --- ГЛАВНЫЙ БАННЕР ДЛЯ КОМПЬЮТЕРОВ (ПК) --- */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://placeholder.com') no-repeat center center/cover;
+            
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),no-repeat center center/cover;
             height: 60vh;
             color: #fff;
             display: flex;
@@ -89,6 +90,65 @@
         .btn:hover {
             background-color: #b71c1c;
         }
+
+        /* --- ЕДИНЫЙ БЛОК АДАТАЦИИ ДЛЯ СМАРТФОНОВ И ПЛАНШЕТОВ --- */
+        @media (max-width: 768px) {
+            /* Мобильная шапка */
+            header {
+                flex-direction: column; /* Выстраиваем логотип и меню вертикально */
+                padding: 20px 10px;
+            }
+
+            .logo {
+                font-size: 18px;
+                line-height: 1.4;
+                margin-bottom: 15px; /* Отступ до кнопок меню */
+                text-align: center;
+            }
+
+            .logo span {
+                display: block; /* Перенос "Боевых Искусств" на новую строку */
+                text-transform: uppercase; 
+                font-size: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap; /* Кнопки перенесутся ниже, если не влезут в один ряд */
+                justify-content: center;
+                gap: 10px; /* Удобные расстояния между кнопками */
+                width: 100%;
+            }
+
+            nav a {
+                padding: 8px 14px;
+                font-size: 14px;
+                background-color: rgba(255, 255, 255, 0.1); /* Аккуратные прозрачные плиточки */
+                border-radius: 4px;
+                text-align: center;
+            }
+
+            nav a:active {
+                background-color: var(--primary-color); /* Подсветка красным при нажатии */
+            }
+
+            /* Мобильный баннер */
+            .hero {
+                height: auto;
+                padding: 3rem 1rem; /* Увеличиваем внутренние отступы, чтобы баннер не казался сжатым */
+            }
+
+            .hero h1 {
+                font-size: 1.8rem; /* Уменьшаем размер букв заголовка, чтобы он влез в экран телефона */
+                line-height: 1.3;
+            }
+
+            .btn {
+                width: 80%; /* Делаем кнопку крупной и удобной для нажатия пальцем */
+                padding: 0.85rem 1rem;
+                font-size: 14px;
+            }
+        }
+
 
         /* Секции */
         section {
@@ -176,6 +236,12 @@
             padding: 1.5rem;
             font-size: 0.9rem;
         }
+
+        img {
+           max-width: 100%;
+           height: auto;
+        }
+
     </style>
 </head>
 <body>
